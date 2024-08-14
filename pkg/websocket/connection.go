@@ -33,3 +33,13 @@ func (connection *Connection) Close() error {
 	defer connection.Mutex.Unlock()
 	return connection.Connection.Close()
 }
+
+type Upgrader struct {
+	websocket.Upgrader
+}
+
+func NewUpgrader() *Upgrader {
+	return &Upgrader{
+		Upgrader: websocket.Upgrader{},
+	}
+}

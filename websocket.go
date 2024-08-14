@@ -13,4 +13,8 @@ type Connection = websocket.Connection
 
 var NewConnection = websocket.NewConnection
 
+type Upgrader = websocket.Upgrader
+
+var NewUpgrader = websocket.NewUpgrader
+
 var SetLogger = utils.SetLogger
